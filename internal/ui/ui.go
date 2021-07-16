@@ -40,14 +40,7 @@ func write() {
 			colour = tcell.ColorRed
 		}
 
-		// r := run.Name
-		// if len(run.Name) > 30 {
-		// 	r = fmt.Sprintf("%s..", run.Name[0:30])
-		// }
-
-		//run.Name
-
-		table.SetCell(i, 0, tview.NewTableCell(fmt.Sprintf("test-pipeline-%d", i)).SetMaxWidth(40))
+		table.SetCell(i, 0, tview.NewTableCell(run.Name).SetMaxWidth(40))
 		table.SetCell(i, 1, tview.NewTableCell(run.Start.Format(time.RFC3339)))
 
 		runEndVal := ""
